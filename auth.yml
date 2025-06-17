@@ -1,0 +1,17 @@
+jobs:
+  build:
+    services:
+      redis:
+        # Docker Hub image
+        image: redis
+        ports:
+          - 6379:6379
+        credentials:
+          username: ${{ secrets.dockerhub_username }}
+          password: ${{ secrets.dockerhub_password }}
+      db:
+        # Private registry image
+        image: ghcr.io/octocat/testdb:latest
+        credentials:
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.ghcr_password }}
