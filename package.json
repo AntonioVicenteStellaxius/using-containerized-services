@@ -1,1 +1,10 @@
-
+{
+  "name": "using-containerized-services",
+  "version": "1.0.0",
+  "description": "Demo for containerized services",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Running tests...\" && exit 0"
+  },
+  "license": "MIT"
+}
